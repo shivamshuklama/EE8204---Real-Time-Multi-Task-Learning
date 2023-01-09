@@ -14,7 +14,7 @@ import cv2
 import torch
 from torch.autograd import Variable
 
-cmap_Nyud = np.load('Data/cmap_nyud.npy')
+cmap_Nyud = np.load('/content/EE8204---Real-Time-Multi-Task-Learning-master/Data/cmap_nyud.npy')
 depth_Coeff = 5000. # Converts into meters
 has_Cuda = torch.cuda.is_available()
 img_Scale  = 1./255
@@ -36,10 +36,10 @@ _ = model_Object.eval()
 check_Point = torch.load('Weights/ExpNYUD_joint.ckpt')
 model_Object.load_state_dict(check_Point['state_dict'])
 
-img_path = 'Examples/Example_NYUDv2_Segm_Depth/000464.png'
+img_path = '/content/EE8204---Real-Time-Multi-Task-Learning-master/Examples/Example_NYUDv2_Segm_Depth/000464.png'
 img = np.array(Image.open(img_path))
-gt_segm = np.array(Image.open('Examples/Example_NYUDv2_Segm_Depth/segm_gt_000464.png'))
-gt_depth = np.array(Image.open('Examples/Example_NYUDv2_Segm_Depth/depth_gt_000464.png'))
+gt_segm = np.array(Image.open('/content/EE8204---Real-Time-Multi-Task-Learning-master/Examples/Example_NYUDv2_Segm_Depth/segm_gt_000464.png'))
+gt_depth = np.array(Image.open('/content/EE8204---Real-Time-Multi-Task-Learning-master/Examples/Example_NYUDv2_Segm_Depth/depth_gt_000464.png'))
 
 
 with torch.no_grad():
