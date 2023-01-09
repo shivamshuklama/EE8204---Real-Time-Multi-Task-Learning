@@ -14,8 +14,8 @@ import cv2
 import torch
 from torch.autograd import Variable
 
-cmap_Nyud = np.load('EE8204---Real-Time-Multi-Task-Learning-master/Data/cmap_nyud.npy')
-cmap_Kitti = np.load('EE8204---Real-Time-Multi-Task-Learning-master/Data/cmap_kitti.npy')
+cmap_Nyud = np.load('content/EE8204---Real-Time-Multi-Task-Learning-master/Data/cmap_nyud.npy')
+cmap_Kitti = np.load('content/EE8204---Real-Time-Multi-Task-Learning-master/Data/cmap_kitti.npy')
 depth_Coeff_Nyud = 5000. # to convert into metres
 depth_Coeff_Kitti = 800.
 has_Cuda = torch.cuda.is_available()
