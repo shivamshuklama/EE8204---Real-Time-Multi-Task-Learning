@@ -33,7 +33,7 @@ if has_Cuda:
     _ = model_Object.cuda()
 _ = model_Object.eval()
 
-check_Point = torch.load('Weights/ExpNYUD_joint.ckpt')
+check_Point = torch.load('/content/EE8204---Real-Time-Multi-Task-Learning-master/Weights/ExpNYUD_joint.ckpt')
 model_Object.load_state_dict(check_Point['state_dict'])
 
 img_path = '/content/EE8204---Real-Time-Multi-Task-Learning-master/Examples/Example_NYUDv2_Segm_Depth/000464.png'
